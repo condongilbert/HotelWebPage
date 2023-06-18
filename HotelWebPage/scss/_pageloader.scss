@@ -1,0 +1,65 @@
+/*lab 6 pageloader*/
+
+ body>div.loadingDiv>div.loader.spinner:before{
+     width: 117px;
+     height: 117px;
+     border-color: #697e83;
+     top: 0px;
+     left: 0px;
+     animation: rotate 1s linear 0s infinite;
+
+ }
+ .loader.spinner:after{
+     width: 117px;
+     height: 117px;
+     border-color: #697e83;
+     top: 0;
+     left: 0;
+     animation: rotate 1s linear 0.5s infinite;
+
+ }
+ .loader{
+     margin: auto;
+     top: 30;
+     position: relative;
+     width: 125px;
+     height: 125px;
+    
+ }
+
+ .loader:before,
+ .loader:after {
+     content: "";
+     display: block;
+     position: absolute;
+     border-width: 4px;
+     border-style: solid;
+     border-radius:50%;
+ }
+ @keyframes rotate{
+     0% {
+         transform:scale(0);
+         opacity:0;
+     }
+     50%{
+         transform:scale(0.7);
+         opacity:1;
+     }
+     100%{
+         transform:scale(1);
+         opacity:0;
+     }
+ }
+
+ body>div.loadingDiv{
+    position: fixed;
+
+     top:0;
+     left:0;
+     bottom:0;
+     right:0;
+     width:100%;
+     height:100%;
+     background-color: #ddd;
+     z-index: 9999999;
+ }
