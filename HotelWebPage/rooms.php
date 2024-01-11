@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -13,52 +13,27 @@
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    
- 
-    
+
+
+
 </head>
 
-<header>
-    <style>
-
-    </style>
-
-
-    <div class="container">
-        <div class="container header-grid">
-            <div class="logo">
-                Bellingham Hotel
-            </div>
-            <nav>
-                <label class="label" for="toggle"><i class="fas fa-bars"></i></label>
-                <input type="checkbox" id="toggle">
-                <ul class="menu">
-                    <li><a href="index.html">Index</a></li>
-                    <li><a href="rooms.html">Rooms</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-
-
-                </ul>
-            </nav>
-        </div>
-
-
-    </div>
-</header>
+<?php include("include/header.php");?>
 
 <body>
-    <div class="loadingDiv">
+    <!-- <div class="loadingDiv">
         <div class="loader spinner"></div>
-    </div>
-    
+    </div> -->
+
 
     <div class="heroimage">
-        <div class="heroitems">
-            <div class="container">
-                <h1>Our Rooms</h1>
-                <p>Discover World's #1 Five Star Hotel </p>
+        <div id="particles-js">
+            <div class="heroitems">
+                <div class="container">
+                    <h1>Our Rooms</h1>
+                    <p>Discover World's #1 Five Star Hotels</p>
 
+                </div>
             </div>
         </div>
     </div>
@@ -169,54 +144,12 @@
 
 
             </div>
-    </section>
-    <div class="clearfix"> </div>
-    <section class="newsLetter">
-        <div class="container">
-            <div class="container newsletter-grid">
-
-
-                <h1>Subscribe to Our Newsletter</h1>
-                <form class="feedback" action="newsletter.html">
-                    <input id="subscribe" type="email" placeholder="Enter Email...">
-                    <button type="submit" class="button">Subscribe</button>
-
-                </form>
-            </div>
-        </div>
-    </section>
+    <?php include("include/subscribe.php");?>
 
 </main>
-<footer class="main-footer">
-    <div class="container">
-        <div class="container footer-grid">
-            <div class="footer">
-                <h4 class="sub-heading">
-                    <p>24/7 Call us</p>
-                    <a href="">+ 1 360 650 9933</a>
-                </h4>
-            </div>
-            <div class="footer">
-                <h4 class="sub-heading">
-                    <p>CONNECT WITH US</p>
-                </h4>
-                <p>We are socialized. Follow us.</p>
-            </div>
-            <div class="footer">
-                <h4 class="sub-heading">
-                    <p>CONNECT WITH US</p>
-                </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, odio.</p>
-            </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <i class="far fa-copyright"></i>Copyright 2021 All rights reserved | Gilbert Condon
-    </div>
+<?php include("include/footer.php");?>
 
-</footer>
-
-<!-- Modal HTML Markup -->
+<!-- Modal php Markup -->
 <div id="RoomForm" class="modal fade">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -225,23 +158,23 @@
                 <h1 class="modal-title">Reservation Form</h1>
             </div>
             <div class="modal-body">
-                <form class="formBook" action="booknow.html">
+                <form class="formBook" action="booknow.php">
                     <!-- new -->
                     <input type="hidden" name="_token" value="">
                     <div class="row my-1">
                         <div class="form-group col-md-6 my-1">
                             <label class="form-label">Arrival Date</label>
-                            <input type="date" class="form-control" id="bookDate" name="date">
+                            <input type="date" class="form-control" id="bookDate" name="arrivedate">
                         </div>
                         <div class="form-group col-md-6">
                             <label class="form-label">Departure Date</label>
-                            <input type="date" class="form-control" id="bookDated" name="date">
+                            <input type="date" class="form-control" id="bookDated" name="departdate">
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6 my-1">
                             <label class="form-label">Room</label>
-                            <select id="room" class="form-control">
+                            <select id="room" name="room" class="form-control">
                                 <option selected>1 Room</option>
                                 <option>2 Room</option>
                                 <option>3 Room</option>
@@ -251,7 +184,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label class="form-label">Guests</label>
-                            <select value="" id="guest" class="form-control">
+                            <select value="" name="guest" id="guest" class="form-control">
                                 <option selected>1 Guest</option>
                                 <option>2 Guests</option>
                                 <option>3 Guests</option>
@@ -283,16 +216,21 @@
     </div>
 </div>
 
-<script src="js/jquery-3.3.1.js"></script><script src="js/pageloader.js"></script>
+<script src="js/jquery-3.3.1.js"></script>
+<!-- <script src="js/pageloader.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-
 alpha1/js/bootstrap.min.js"></script>
 <script src="js/book.js"></script>
-<script src="js/main.js"></script>
 
 
 
 
-<form action="/newsletter.html" method="POST" class="feedback" class="autocomplete"></form>
+
+<form action="/newsletter.php" method="POST" class="feedback" class="autocomplete"></form>
 <script src="https://unpkg.com/scrollreveal"></script> -->
-<script src="js/lightbox.js"></script>
+<!-- <script src="js/lightbox.js"></script> -->
+<script src="js/main.js"></script>
+<script src="js/pageloader.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>

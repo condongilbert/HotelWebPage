@@ -12,9 +12,14 @@ form1.addEventListener("submit", e=>{
         }
         form1.submit();
 
+        baguetteBox.run('.gallery',{
+            animation: 'fadeIn'
+        });
+
+        });
+
         
             
           
 
 
-});

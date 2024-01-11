@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 <head>
     <style></style>
     <meta charset="UTF-8">
@@ -14,34 +14,8 @@
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<header>
-   
-    <div class="container">
-        <div class="container header-grid">
-            <div class="logo">
-                Bellingham Hotel
 
-            </div>
-            <nav>
-                <label class="label" for="toggle"><i class="fas fa-bars"></i></label>
-                <input type="checkbox" id="toggle">
-                <ul class="menu">
-                    <li><a href="index.html">Index</a></li>
-                    <li><a href="rooms.html">Rooms</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-
-                </ul>
-            </nav>
-        </div>
-
-
-
-    </div>
-
-
-</header>
-
+<?php include('include/header.php');?>
 <body>
 
 
@@ -51,7 +25,7 @@
                 <div class="container">
                     <h1>Welcome to Bellingham Hotel</h1>
                     <p>Discover World's #1 Five Star Hotel </p>
-                    <a class="button" href="rooms.html">Book Now</a>
+                    <a class="button" href="rooms.php">Book Now</a>
                 </div>
             </div>
         </div>
@@ -75,7 +49,7 @@
                         recusandae? Dolorum, unde a quibusdam est? Corporis deleniti obcaecati quibusdam inventore fuga
                         eveniet! Qui delectus tempore amet!</p>
                     <p>
-                        <a class="button" href="gallery.html">
+                        <a class="button" href="gallery.php">
                             More About Us
                         </a>
                     </p>
@@ -127,7 +101,7 @@
         <div class="container">
             <div class="container newsletter-grid">
                 <h1>Subscribe to Our Newsletter</h1>
-                <form class="feedback" action="newsletter.html">
+                <form class="feedback" action="newsletter.php">
                     <input id="subscribe" type="email" placeholder="Enter Email...">
                     <button type="submit" class="button">Subscribe</button>
 
@@ -137,33 +111,10 @@
     </section>
 
 </main>
-<footer class="main-footer">
-    <div class="container">
-        <div class="container footer-grid">
-            <div class="footer">
-                <h4 class="sub-heading">
-                    <p>24/7 Call us</p>
-                    <a href="">+ 1 360 650 9933</a>
-                </h4>
-            </div>
-            <div class="footer">
-                <h4 class="sub-heading">
-                    <p>CONNECT WITH US</p>
-                </h4>
-                <p>We are socialized. Follow us.</p>
-            </div>
-            <div class="footer">
-                <h4 class="sub-heading">
-                    <p>CONNECT WITH US</p>
-                </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, odio.</p>
-            </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <i class="far fa-copyright"></i>Copyright 2021 All rights reserved | Gilbert Condon
-    </div>
-</footer>
+
+<?php include("include/footer.php");?>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-
@@ -172,12 +123,5 @@ alpha1/js/bootstrap.min.js"></script>
 <script src="js/pageloader.js"></script>
 <script src="js/particles.js"></script>
 <script src="js/app.js"></script>
-
-
-
-
-
-
-
-<form action="/newsletter.html" method="POST" class="feedback" class="autocomplete"></form>
+<form action="/newsletter.php" method="POST" class="feedback" class="autocomplete"></form>
 
